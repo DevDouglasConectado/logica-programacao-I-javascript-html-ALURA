@@ -1,0 +1,29 @@
+<meta charset="UTF-8">
+<input type="text">
+ <button>Compare com meu segredo</button>
+
+<script>
+    var segredo = [5,7,10,2,3];
+    
+    var input = document.querySelector("input");
+      input.focus();
+
+       function verificar(){
+
+           var achou = false;
+
+           for(var posicao =0; posicao < segredo.length; posicao++){
+               if(input.value == segredo[posicao]){
+                 alert("você Acertou");
+                 achou = true;
+                 break;
+               }
+               
+           }
+           if(achou==false){alert("Voçe ERROU");}
+           input.value = "";
+           input.focus();
+       }
+  var button = document.querySelector("button");
+  button.onclick = verificar;
+</script>
